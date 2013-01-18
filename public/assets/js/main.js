@@ -9,7 +9,7 @@ var AQE = (function ( $ ) {
 
   function initialize() {
     var mapOptions = {
-      zoom: 3,
+      zoom: 11,
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       streetViewControl: false,
       scrollwheel: false
@@ -21,7 +21,7 @@ var AQE = (function ( $ ) {
     if ( $(".dashboard-map").length && mapmarkers && mapmarkers.length ) {
       var dashpos = new google.maps.LatLng(mapmarkers[0].lat, mapmarkers[0].lng);
       map.setCenter(dashpos);
-      map.setZoom(5);
+      map.setZoom(13);
     }
     // Try HTML5 geolocation
     else if(navigator.geolocation) {
@@ -41,7 +41,7 @@ var AQE = (function ( $ ) {
   }
 
   function handleNoGeolocation() {
-    var pos = new google.maps.LatLng(30,-20);
+    var pos = new google.maps.LatLng(-33.91,151.16);
     map.setCenter(pos);
   }
 
@@ -51,7 +51,7 @@ var AQE = (function ( $ ) {
     var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      icon: '/assets/img/egg-icon.png'
+      icon: '/assets/img/data-feed-icon.png'
     });
     google.maps.event.addListener(marker, 'click', function() {
       var target = '/egg/'+ feed_id;
