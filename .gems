@@ -1,0 +1,7 @@
+source 'http://rubygems.org'
+'sinatra'
+'cosm-rb'
+'sass'
+'newrelic_rpm'
+'thin'
+'rack-force_domain'
